@@ -1,5 +1,14 @@
 
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+html body {
+  margin-bottom: 112px; /* Margin bottom by footer height */
+}
+
+
 /* ----------------------------------------------------------------------------
    Navigation
 ---------------------------------------------------------------------------- */
@@ -11,4 +20,15 @@
    Footer
 ---------------------------------------------------------------------------- */
 
-
+html body #powered_by {
+  background-color: inherit;
+  border-top: 0px;
+}
+.flatmir-footer {
+  margin-top: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 112px; /* Set the fixed height of the footer here */
+}
+}
