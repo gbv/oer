@@ -7,11 +7,19 @@ html {
   min-height: 100%;
 }
 html body {
-  margin-bottom: 112px; /* Margin bottom by footer height */
+  margin-bottom: 120px; /* Margin bottom by footer height */
 }
 
 #logo_modul {
   margin-left: -15px;
+}
+
+
+/* ----------------------------------------------------------------------------
+   Metadata Page
+---------------------------------------------------------------------------- */
+.panel-title {
+    color: #004c93;
 }
 
 
@@ -40,6 +48,5 @@ html body #powered_by {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 112px; /* Set the fixed height of the footer here */
 }
 
