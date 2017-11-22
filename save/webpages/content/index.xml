@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyCoReWebPage>
+<MyCoReWebPage>
+
+  <section title="OER der Universität Duisburg-Essen" xml:lang="de">
+        <div class="jumbotwo" >
+            <div class="row">
+
+                <div class="col-xs-12">
+                    <h2>Open Educational Resources der Universität Duisburg-Essen</h2>
+                    <p>
+                      Diese Seite befindet sich derzeit im Aufbau.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+  </section>
+  <meta>
+    <log date="2017-11-22" time="11:12" labelPath=" » Start" lastEditor="Kathleen Neumann" />
+  </meta>
+</MyCoReWebPage>

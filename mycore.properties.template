@@ -1,0 +1,76 @@
+#
+# by Kathleen.Neumann@gbv.de
+#
+# created 2017-11-22
+#
+
+##############################################################################
+#                                                                            #
+# basic application configuration                                            #
+#                                                                            #
+##############################################################################
+
+# name of project - publication server for OER
+  MCR.NameOfProject=oer
+  MIR.projectid.default=oer
+
+# application base URL
+# MCR.baseurl=https://oer.uni-due.de
+
+# supported languages
+  MCR.Metadata.Languages=de,en
+
+# SOLR-URL
+  MCR.Module-solr.ServerURL=http\://localhost\:8983/solr/oer
+
+# Datadirectory
+  MCR.datadir=/home/oeradm/data
+  MCR.Save.FileSystem=/home/oeradm/.mycore/oer/save
+
+# Layout
+  MIR.CustomLayout.CSS=oer.css
+  MIR.CustomLayout.JS=oer.js
+
+# this is a productive environment
+  MIR.testEnvironment=false
+
+
+##############################################################################
+#                                                                            #
+# Sherpa/Romeo API Key                                                       #
+# http://www.sherpa.ac.uk/romeo/api29.php?ak=                                #
+#                                                                            #
+##############################################################################
+
+# key registered for xxx
+#  MCR.Mods.SherpaRomeo.ApiKey=xxx
+
+
+##############################################################################
+#                                                                            #
+# Generic mail configuration for MCRMailer                                   #
+#                                                                            #
+##############################################################################
+
+# The server for outgoing mails
+  MCR.Mail.Server=
+# The mail protocol
+  MCR.Mail.Protocol=smtp
+# The debug option
+  MCR.Mail.Debug=false
+# Encoding for the mail
+  MCR.Mail.Encoding=UTF-8
+# Number of send tries
+  MCR.Mail.NumTries=1
+# Editor Mail adresses for Messages add1@serv1,add2@serv2,...
+  MCR.Mail.Address=
+  MCR.mir-module.EditorMail=
+  MCR.mir-module.MailSender=
+
+
+##############################################################################
+# Error Page                                                                 #
+##############################################################################
+# Set mcr_error properties in your mycore.properties.private to show OA error page without StackTrace
+#  MCR.ContentTransformer.mcr_error.Stylesheet=xsl/errorPage.xsl,%MCR.LayoutTransformerFactory.Default.Stylesheets%
+
