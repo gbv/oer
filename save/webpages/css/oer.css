@@ -1,4 +1,6 @@
-
+/* ----------------------------------------------------------------------------
+   Main
+---------------------------------------------------------------------------- */
 
 html {
   position: relative;
@@ -8,21 +10,30 @@ html body {
   margin-bottom: 112px; /* Margin bottom by footer height */
 }
 
-
-/* ----------------------------------------------------------------------------
-   Navigation
----------------------------------------------------------------------------- */
-
-
+#logo_modul {
+  margin-left: -15px;
+}
 
 
 /* ----------------------------------------------------------------------------
    Footer
 ---------------------------------------------------------------------------- */
 
+.internal_links li > a:hover, .internal_links li > a:focus {
+  text-decoration: underline;
+  background-color: transparent;
+}
+.internal_links > li > a {
+  padding-bottom: 0;
+}
+.internal_links > li:nth-child(1) > a:nth-child(1) {
+  padding-left: 0;
+}
+
 html body #powered_by {
   background-color: inherit;
   border-top: 0px;
+  padding-top: 0;
 }
 .flatmir-footer {
   margin-top: 0;
@@ -31,4 +42,4 @@ html body #powered_by {
   width: 100%;
   height: 112px; /* Set the fixed height of the footer here */
 }
-}
+
