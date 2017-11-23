@@ -92,6 +92,7 @@
         </div>
         <div class="col-md-6 text-right">
           <a href="https://www.uni-due.de/ub/"><img src="{$WebApplicationBaseURL}images/ub_logo_205.png" style="background-color: #e1e4f3;padding: 6.5px;" /></a>
+          &#160;
           <a href="https://www.uni-due.de/zim/"><img src="{$WebApplicationBaseURL}images/zimlogo_web_neu3.jpg" /></a>
         </div>
       </div>
