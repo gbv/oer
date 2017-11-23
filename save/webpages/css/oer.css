@@ -7,11 +7,48 @@ html {
   min-height: 100%;
 }
 html body {
+  background-image: url("../images/ude_wolken.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: rgb(0, 76, 147);
+  background-attachment: fixed;
+  overflow-y: scroll;
   margin-bottom: 120px; /* Margin bottom by footer height */
 }
+html body #page {
+  padding: 20px 40px;
+}
 
+
+
+/* ----------------------------------------------------------------------------
+   Header
+---------------------------------------------------------------------------- */
+
+#project_logo_box {
+  margin-top: 20px;
+}
 #logo_modul {
   margin-left: -15px;
+}
+html body header #header_box #project_logo_box a #logo_mir, html body header #header_box #project_logo_box a #logo_slogan {
+    color: #fff;
+}
+#ude-logo img {
+  margin-top: 20px;
+}
+.navbar {
+  margin-bottom: 20px;
+}
+.mir-main-nav {
+  box-shadow: unset;
+}
+.mir-prop-nav .navbar-nav > li > a {
+  color: #fff;
+}
+.mir-prop-nav .navbar-nav > li > a .caret {
+  border-top-color: #fff;
 }
 
 
@@ -21,6 +58,7 @@ html body {
 .panel-title {
     color: #004c93;
 }
+
 
 
 /* ----------------------------------------------------------------------------
@@ -47,6 +85,7 @@ html body #powered_by {
   margin-top: 0;
   position: absolute;
   bottom: 0;
+  border-top: 0px;
   width: 100%;
 }
 

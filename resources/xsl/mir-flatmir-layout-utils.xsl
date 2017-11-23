@@ -16,12 +16,15 @@
             <xsl:call-template name="mir.languageMenu" />
           </ul>
         </nav>
+        <div id="ude-logo">
+          <a href="https://www.uni-due.de/"><img src="{$WebApplicationBaseURL}images/ude-logo.png" alt="UDE-Logo" /></a>
+        </div>
       </div>
       <div id="project_logo_box">
         <a href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}"
            class="">
-          <span id="logo_modul">OER</span>
-          <span id="logo_slogan">Open Educational Resources</span>
+          <span id="logo_modul">oer</span>
+          <span id="logo_slogan">Open Educational Resources an der UDE</span>
         </a>
       </div>
     </div>
@@ -82,10 +85,14 @@
   <xsl:template name="mir.footer">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-md-6">
           <ul class="internal_links nav navbar-nav">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
           </ul>
+        </div>
+        <div class="col-md-6 text-right">
+          <a href="https://www.uni-due.de/ub/"><img src="{$WebApplicationBaseURL}images/ub_logo_205.png" style="background-color: #e1e4f3;padding: 6.5px;" /></a>
+          <a href="https://www.uni-due.de/zim/"><img src="{$WebApplicationBaseURL}images/zimlogo_web_neu3.jpg" /></a>
         </div>
       </div>
     </div>
