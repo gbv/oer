@@ -53,7 +53,7 @@
 ##############################################################################
 
 # The server for outgoing mails
-  MCR.Mail.Server=
+  MCR.Mail.Server=mailout.uni-due.de
 # The mail protocol
   MCR.Mail.Protocol=smtp
 # The debug option
@@ -63,7 +63,7 @@
 # Number of send tries
   MCR.Mail.NumTries=1
 # Editor Mail adresses for Messages add1@serv1,add2@serv2,...
-  MCR.Mail.Address=
+  MCR.Mail.Address=oer-repository@uni-due.de
   MCR.mir-module.EditorMail=
   MCR.mir-module.MailSender=
 

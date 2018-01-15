@@ -18,8 +18,13 @@ html body {
 }
 html body #page {
   padding: 20px 40px;
+  background-color: #f8f8f8;
+  border: 2px solid #dce4ec;
+  border-radius: 2px;
 }
-
+.form-control {
+  border-radius: 2px;
+}
 
 
 /* ----------------------------------------------------------------------------
@@ -27,6 +32,7 @@ html body #page {
 ---------------------------------------------------------------------------- */
 html body header #header_box {
   background-color: rgba(255,255,255,0.2);
+  border-radius: 2px;
 }
 #project_logo_box {
   margin-top: 30px;
@@ -38,7 +44,8 @@ html body header #header_box #project_logo_box a #logo_mir, html body header #he
     color: #fff;
 }
 #ude-logo img {
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .navbar {
   margin-bottom: 20px;
