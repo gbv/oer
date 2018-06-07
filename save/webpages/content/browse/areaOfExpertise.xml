@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyCoReWebPage>
+
+<MyCoReWebPage>
+
+  <section i18n="oer.browse.areaOfExpertise" xml:lang="all">
+
+    <h3><i18n key="oer.browse.areaOfExpertise" /></h3>
+    <classificationbrowser classification="oer_areaOfExpertise"
+                               objecttype="mods"
+                              restriction="+category.top:&quot;state:published&quot;"
+                                    field="category.top"
+                             countresults="true"
+                               addclassid="true"
+                              emptyleaves="true"
+                                    style="bootstrap"
+                               parameters="sort=mods.dateIssued+desc"
+                             addParameter="XSL.template=template_mir"
+    />
+
+  </section>
+
+</MyCoReWebPage>

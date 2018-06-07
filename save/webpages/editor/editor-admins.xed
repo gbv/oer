@@ -25,7 +25,7 @@
         
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="type.of.resource" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="language.repeated" />
-        
+        <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.class.areaOfExpertise" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="identifier.managed" />
         <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="identifier.repeated" />
        
