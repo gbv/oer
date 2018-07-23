@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="oer_languageLevel">
+
+  <label xml:lang="de" text="Sprachniveau" />
+  <label xml:lang="en" text="Language level" />
+  <label xml:lang="x-uri" text="https://oer.uni-due.de/classifications/oer_languageLevel" />
+
+  <categories>
+    <category ID="A1">
+      <label xml:lang="de" text="A1" />
+     </category>
+    <category ID="A2">
+      <label xml:lang="de" text="A2" />
+     </category>
+    <category ID="B1">
+      <label xml:lang="de" text="B1" />
+     </category>
+    <category ID="B2">
+      <label xml:lang="de" text="B2" />
+     </category>
+    <category ID="C1">
+      <label xml:lang="de" text="C1" />
+     </category>
+    <category ID="C2">
+      <label xml:lang="de" text="C2" />
+     </category>
+  </categories>
+</mycoreclass>

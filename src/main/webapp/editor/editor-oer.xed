@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section title="OER erfassen" xml:lang="de" />
+  <section title="Describe OER" xml:lang="en" />
+  
+  <section xml:lang="all">
+
+    <xed:form xmlns:xed="http://www.mycore.de/xeditor" xmlns:cmd="http://www.cdlib.org/inside/diglib/copyrightMD"
+      method="post" role="form" class="form-horizontal">
+      <xed:include uri="webapp:editor/editor-includes.xed" ref="in.out" />
+
+      <xed:bind xpath="/mycoreobject">
+        <xed:include uri="webapp:editor/editor-includes.xed" ref="mycore.common" />
+
+        <xed:bind xpath="metadata/def.modsContainer[@class='MCRMetaXML'][@notinherit='true']/modsContainer/mods:mods">
+          <xed:include uri="webapp:editor/editor-includes.xed" ref="failed-validation-messages" />
+          <xed:bind xpath="mods:typeOfResource/@mcr:categId" initially="typeOfResource:text" />
+
+          <xed:bind xpath="../../../../service">
+            <xed:choose>
+              <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin')">
+                <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="status" />
+              </xed:when>
+              <xed:otherwise>
+                <xed:bind xpath="servstates[@class='MCRMetaClassification']/servstate[@classid='state']/@categid" default="submitted" />
+              </xed:otherwise>
+            </xed:choose>
+          </xed:bind>
+          
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="genre.repeated" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="institutes.repeat" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.class.areaOfExpertise.repeated" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="title" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.person.repeated" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="abstract.simple" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="subject.simple" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="language.repeated" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.class.languageLevel" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="date.created.datetimepicker" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="date.updated.datetimepicker" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="date.issued.datetimepicker" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="rights" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="comment" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.related" />
+
+          <xed:include uri="webapp:editor/editor-includes.xed" ref="cancel.submit" />
+          <xed:include uri="webapp:editor/editor-includes.xed" ref="cleanup-rules" />
+          <xed:include uri="webapp:editor/editor-includes.xed" ref="validation-rules" />
+
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="javascript" />
+          <!-- frame for modal window -->
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="modal.name" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="modal.body" />
+
+        </xed:bind>
+      </xed:bind>
+    </xed:form>
+
+    <script type="text/javascript" src="../js/chosen/chosen.jquery.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function() { jQuery('select[class*="chosen"]').chosen({search_contains: true}); });
+    </script>
+
+  </section>
+</MyCoReWebPage>
