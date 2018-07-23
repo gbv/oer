@@ -20,6 +20,12 @@
     <url>https://www.uni-due.de/ub/</url>
   </organization>
 
+  <scm>
+    <connection>scm:git:https://github.com/gbv/oer.git</connection>
+    <developerConnection>scm:git:https://github.com/gbv/oer.git</developerConnection>
+    <url>https://github.com/gbv/oer/tree/master</url>
+  </scm>
+
   <properties>
     <MCR.AppName>oer</MCR.AppName>
     <cargo.container>jetty9x</cargo.container>
