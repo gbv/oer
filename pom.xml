@@ -47,7 +47,6 @@
   </properties>
 
   <build>
-    <finalName>oer</finalName>
     <plugins>
 
       <plugin>
@@ -194,6 +193,33 @@
 
   <dependencies>
     <dependency>
+      <groupId>org.jdom</groupId>
+      <artifactId>jdom2</artifactId>
+      <version>2.0.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore</groupId>
+      <artifactId>mycore-base</artifactId>
+      <version>${mycore.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-slf4j-impl</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.mycore</groupId>
+      <artifactId>mycore-user2</artifactId>
+      <version>${mycore.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
       <groupId>org.mycore.solr</groupId>
       <artifactId>solr</artifactId>
       <version>4.10.4.1-SNAPSHOT</version>
@@ -205,12 +231,6 @@
       <artifactId>mir-webapp</artifactId>
       <version>2017.06.0.1-SNAPSHOT</version>
       <type>war</type>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>unidue.ub</groupId>
-      <artifactId>oer-extensions</artifactId>
-      <version>1.0-SNAPSHOT</version>
       <scope>runtime</scope>
     </dependency>
   </dependencies>
