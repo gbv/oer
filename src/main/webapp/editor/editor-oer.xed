@@ -40,7 +40,7 @@
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="date.created.datetimepicker" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="date.updated.datetimepicker" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="date.issued.datetimepicker" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="rights" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="license" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="comment" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.related" />
 
