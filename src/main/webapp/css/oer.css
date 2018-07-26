@@ -108,7 +108,7 @@ html body #powered_by {
    chosen (jquery plugin)
 ---------------------------------------------------------------------------- */
 
-.chzn-container-single .chzn-single {
+.chosen-container-single .chosen-single {
   font-size: 14px;
   line-height: 1.42857143;
   color: #1a171b;
@@ -121,3 +121,13 @@ html body #powered_by {
   padding: 10px 20px;
 }
 
+.chosen-container-single .chosen-single div b {
+  background: url(chosen-sprite.png) no-repeat 0 10px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+  box-shadow: 0 0 0;
+  background-color: #ffffff;
+  background-image: none;
+  border: 2px solid #dce4ec;
+}
