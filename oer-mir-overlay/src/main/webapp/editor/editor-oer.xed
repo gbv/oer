@@ -32,7 +32,7 @@
               <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="title" />
               <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="abstract.simple" />
               <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="subject.simple" />
-              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="language.repeated" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.language.repeated" />
               <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.class.languageLevel" />
             </div>
           </fieldset>
