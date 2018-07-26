@@ -57,7 +57,7 @@
       </xed:bind>
     </xed:form>
 
-    <script type="text/javascript" src="../js/chosen/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="../webjars/chosen/1.8.2/chosen.jquery.min.js" />
     <script type="text/javascript">
       jQuery(document).ready(function() { jQuery('select[class*="chosen"]').chosen({search_contains: true}); });
     </script>
