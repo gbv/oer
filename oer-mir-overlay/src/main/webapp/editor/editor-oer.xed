@@ -29,7 +29,7 @@
           </xed:bind>
           
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="genre.repeated" />
-          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="institutes.repeat" />
+          <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.faculty.repeated" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.class.areaOfExpertise.repeated" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed"     ref="title" />
           <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes-oer.xed" ref="oer.person.repeated" />
