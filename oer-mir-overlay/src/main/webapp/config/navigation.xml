@@ -25,47 +25,27 @@
         </item>
     </menu>
     <menu id="search">
-        <label xml:lang="de">Suche</label>
-        <label xml:lang="en">Search</label>
-        <item href="/content/search/simple.xed" type="intern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">einfach</label>
-            <label xml:lang="en">simple</label>
-        </item>
-        <item href="/content/search/simple_intern.xed" type="intern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">einfach</label>
-            <label xml:lang="en">simple</label>
-        </item>
-        <item href="/content/search/complex.xed" type="intern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">komplex</label>
-            <label xml:lang="en">complex</label>
-        </item>
-        <item href="/content/search/complex_intern.xed" type="intern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">komplex</label>
-            <label xml:lang="en">complex</label>
-        </item>
-        <item href="/search/search-expert.xed" type="intern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">expert</label>
-            <label xml:lang="en">expert</label>
-        </item>
-    </menu>
-    <menu id="browse">
-        <label xml:lang="de">Blättern</label>
-        <label xml:lang="en">Browse</label>
-        <item href="/content/browse/institutes.xml" type="intern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">Einrichtungen</label>
-            <label xml:lang="en">Institutions</label>
-        </item>
-        <item href="/content/browse/genres.xml" type="intern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">Materialarten</label>
-            <label xml:lang="en">Kinds of material</label>
+        <label xml:lang="de">OER suchen &amp; finden</label>
+        <label xml:lang="en">Search &amp; find OER</label>
+        <item href="/content/search/search-oer.xed" type="intern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">Erweiterte Suche</label>
+            <label xml:lang="en">Extended query form</label>
         </item>
         <item href="/content/browse/areaOfExpertise.xml" type="intern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">Fachgebiete</label>
-            <label xml:lang="en">Areas of Expertise</label>
+            <label xml:lang="de">nach Fachgebieten</label>
+            <label xml:lang="en">by area of expertise</label>
+        </item>
+        <item href="/content/browse/genres.xml" type="intern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">nach Materialarten</label>
+            <label xml:lang="en">by kind of material</label>
+        </item>
+        <item href="/content/browse/institutes.xml" type="intern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">nach Fakultät/Institut</label>
+            <label xml:lang="en">by faculty/institution</label>
         </item>
         <item href="/servlets/MCRActionMappingServlet/personindex/browse" type="extern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">Personen</label>
-            <label xml:lang="en">Persons</label>
+            <label xml:lang="de">nach Personen</label>
+            <label xml:lang="en">by person names</label>
         </item>
     </menu>
     <menu id="publish" dir="/content/publish">
@@ -79,6 +59,10 @@
             <label xml:lang="de">Leitlinien</label>
             <label xml:lang="en">Guidelines</label>
         </item>
+    </menu>
+    <menu id="about" dir="/content/publish">
+        <label xml:lang="de">Über uns</label>
+        <label xml:lang="en">About us</label>
     </menu>
     <menu id="user">
         <label xml:lang="de">Nutzermenü</label>

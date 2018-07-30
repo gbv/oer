@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage xmlns:xed="http://www.mycore.de/xeditor" xmlns:mir="http://www.mycore.de/mir">
+  <section title="OERs suchen" xml:lang="de"/>
+  <section title="Search open educational resources" xml:lang="en"/>
+  
+  <section xml:lang="all">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-0 col-md-11 col-sm-offset-0 col-sm-12">
+
+          <xed:form class="form-horizontal" role="form">
+            <xed:post-processor xsl="query-postprocessor.xsl" />
+            <xed:source uri="searchInput:{$id}" />
+            
+            <xed:bind xpath="query">
+              <xed:bind xpath="@numPerPage" default="20" />
+              <xed:bind xpath="@mask" set="content/search/search-oer.xed" />
+              <xed:bind xpath="conditions[@format='xml']/boolean[@operator='and']">
+                <xed:bind xpath="condition[@field='objectType'][@operator='='][@value='mods']" />
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                      <xed:output i18n="oer.form.search.headline" />
+                    </h3>
+                  </div>
+                  <div class="panel-body">
+                  
+                    <!-- admins/editors can choose publication status, others find only published documents and their own documents -->
+                    <xed:choose>
+                      <xed:when test="xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','admin') or xed:call-java('org.mycore.common.xml.MCRXMLFunctions','isCurrentUserInRole','editor')">
+                        <xed:bind xpath="condition[@field='state'][@operator='=']/@value" default="published">
+                          <div class="form-group ">
+                            <label class="col-md-4 col-sm-6 control-label" for="field.status">
+                              <xed:output i18n="editor.search.status" />:
+                            </label>
+                            <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                              <div class="input-group">
+                                <select id="field.status" class="form-control input-md {$xed-validation-marker}">
+                                  <xed:include uri="xslStyle:items2options:classification:editor:-1:children:state" />
+                                </select>
+                                <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:editor.search.status.tooltip}">
+                                  <i class="fa fa-info-circle" />
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </xed:bind>
+                      </xed:when>
+                      <xed:otherwise>
+                        <xed:bind xpath="boolean[@operator='or']">
+                          <xed:bind xpath="condition[@field='createdby'][@operator='=']/@value" default="{$CurrentUser}" />
+                          <xed:bind xpath="condition[@field='state'][@operator='=']/@value" set="published">
+                          </xed:bind>
+                        </xed:bind>
+                      </xed:otherwise>
+                    </xed:choose>
+                  
+                    <xed:bind xpath="condition[@field='category'][1][@operator='=']/@value">
+                      <div class="form-group ">
+                        <label class="col-md-4 col-sm-6 control-label" for="field.genre">
+                          <xed:output i18n="component.mods.genre" />
+                        </label>
+                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                          <div class="input-group">
+                            <select id="field.genre" class="form-control input-md chosen {$xed-validation-marker}">
+                              <option value="">
+                                <xed:output i18n="mir.select" />
+                              </option>
+                              <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:mir_genres" />
+                            </select>
+                            <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.faculty.tooltip}">
+                              <i class="fa fa-info-circle" />
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </xed:bind>
+
+                    <xed:bind xpath="condition[@field='category'][2][@operator='=']/@value">
+                      <div class="form-group ">
+                        <label class="col-md-4 col-sm-6 control-label" for="field.area">
+                          <xed:output i18n="oer.class.areaOfExpertise" />
+                        </label>
+                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                          <div class="input-group">
+                            <select id="field.area" class="form-control input-md chosen {$xed-validation-marker}">
+                              <option value="">
+                                <xed:output i18n="mir.select" />
+                              </option>
+                              <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:oer_areaOfExpertise" />
+                            </select>
+                            <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.faculty.tooltip}">
+                              <i class="fa fa-info-circle" />
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </xed:bind>
+
+                    <xed:bind xpath="condition[@field='category'][3][@operator='=']/@value">
+                      <div class="form-group ">
+                        <label class="col-md-4 col-sm-6 control-label" for="field.faculty">
+                          <xed:output i18n="mir.institution" />:
+                        </label>
+                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                          <div class="input-group">
+                            <select id="field.faculty" class="form-control input-md chosen {$xed-validation-marker}">
+                              <option value="">
+                                <xed:output i18n="mir.select" />
+                              </option>
+                              <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:mir_institutes" />
+                            </select>
+                            <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.faculty.tooltip}">
+                              <i class="fa fa-info-circle" />
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </xed:bind>
+
+                    <xed:bind xpath="condition[@field='category'][4][@operator='=']/@value">
+                      <div class="form-group ">
+                        <label class="col-md-4 col-sm-6 control-label" for="field.language">
+                          <xed:output i18n="mir.language" />:
+                        </label>
+                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                          <div class="input-group">
+                            <select id="field.language" class="form-control input-md {$xed-validation-marker}">
+                              <option value="">
+                                <xed:output i18n="mir.select" />
+                              </option>
+                              <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:rfc4646" />
+                            </select>
+                            <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.faculty.tooltip}">
+                              <i class="fa fa-info-circle" />
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </xed:bind>
+
+                    <xed:bind xpath="condition1[@operator='contains']">
+                      <div class="form-group {$xed-validation-marker}">
+                        <div class="col-md-4 col-sm-6">
+                          <xed:bind xpath="@field" default="allMeta">
+                            <select class="form-control" style="text-align:right">
+                              <option value="mods.title"><xed:output i18n="editor.search.mir.title" /></option>
+                              <option value="topic"><xed:output i18n="mir.subject.topic" /></option>
+                              <option value="abstract"><xed:output i18n="mir.abstract.text" /></option>
+                              <option value="allMeta"><xed:output i18n="oer.form.search.text" /></option>
+                            </select>
+                          </xed:bind>
+                        </div>
+                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                          <div class="input-group">
+                            <xed:bind xpath="@value">
+                              <input id="field.text" class="form-control input-md" type="text" />
+                              <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.text.tooltip}">
+                                <i class="fa fa-info-circle" />
+                              </span>
+                            </xed:bind>
+                          </div>
+                        </div>
+                      </div>
+                    </xed:bind>
+                  
+                    <xed:bind xpath="condition2[@operator='contains']">
+                      <xed:bind xpath="@field" set="mods.name" />
+                      <div class="form-group {$xed-validation-marker}">
+                        <label class="col-md-4 col-sm-6 control-label">
+                          <xed:output i18n="mir.search.name" />
+                        </label>
+                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                          <div class="input-group">
+                            <xed:bind xpath="@value">
+                              <input id="field.person" class="form-control input-md" type="text" placeholder="{i18n:editor.search.mir.name}" />
+                              <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.diss.person.tooltip}">
+                                <i class="fa fa-info-circle" />
+                              </span>
+                            </xed:bind>
+                          </div>
+                        </div>
+                      </div>
+                    </xed:bind>
+
+                    <xed:bind xpath="condition3">
+                      <xed:bind xpath="@field" set="mods.dateIssued" />
+                      <div class="form-group {$xed-validation-marker}">
+                        <label class="col-md-4 col-sm-6 control-label">
+                          <xed:output i18n="component.mods.metaData.dictionary.dateIssued" />:
+                        </label>
+                        <div class="col-md-8 col-sm-6 {$xed-validation-marker}">
+                          <div class="form-inline">
+                            <xed:bind xpath="@operator" default="&gt;=">
+                              <select class="form-control">
+                                <option value="=">=</option>
+                                <option value="&gt;">&gt;</option>
+                                <option value="&gt;=">&gt;=</option>
+                                <option value="&lt;">&lt;</option>
+                                <option value="&lt;=">&lt;=</option>
+                              </select>
+                            </xed:bind>
+                            <div class="input-group datetimepicker date-changeable">
+                              <xed:bind xpath="@value">
+                                <input id="field.date" class="form-control input-md" type="text" placeholder="{i18n:mir.placeholder.date}" />
+                                <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.diss.date.tooltip}">
+                                  <i class="fa fa-info-circle" />
+                                </span>
+                              </xed:bind>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </xed:bind>
+
+                  </div>
+      
+                  <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                      <mir:template name="submitButton" i18n="editor.search.search" target="servlet_MCRQLSearchServlet" />
+                    </div>
+                  </div>
+      
+                </div>
+              </xed:bind>
+
+              <xed:bind xpath="sortBy[field[@name='mods.dateIssued'][@order='descending']]" />
+
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="javascript" />
+              <!-- frame for modal window -->
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="modal.name" />
+              <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="modal.body" />
+
+            </xed:bind>
+          </xed:form>
+
+          <script type="text/javascript" src="../../webjars/chosen/1.8.2/chosen.jquery.min.js" />
+          <script type="text/javascript">
+            jQuery(document).ready(function() { jQuery('select[class*="chosen"]').chosen({search_contains: true}); });
+          </script>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</MyCoReWebPage>
