@@ -59,7 +59,7 @@
         </xed:bind>
         <div class="col-md-6">
           <div class="controls">
-            <select class="form-control form-control-inline">
+            <select class="form-control form-control-inline text-right">
               <option value=""><xed:output i18n="mir.select.optional" /></option>
               <xed:include uri="xslStyle:items2options:classification:editor:-1:children:oer_languageLevel" />
             </select>
@@ -150,7 +150,7 @@
         <div class="form-group">
           <div class="col-md-3">
             <xed:bind xpath="@type" initially="{$relatedItemType}">
-              <select class="form-control">
+              <select class="form-control text-right">
                 <option value="preceding">
                   <xed:output i18n="mir.relatedItem.preceding" />
                 </option>
