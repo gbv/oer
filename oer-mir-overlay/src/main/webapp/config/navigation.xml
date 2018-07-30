@@ -21,12 +21,16 @@
         </item>
         <item href="/content/below/imprint.xml" type="intern" replaceMenu="false" constrainPopUp="false">
             <label xml:lang="de">Impressum</label>
-            <label xml:lang="en">Impressum</label>
+            <label xml:lang="en">Imprint</label>
+        </item>
+        <item href="/content/below/privacy.xml" type="intern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">Datenschutz</label>
+            <label xml:lang="en">Data privacy</label>
         </item>
     </menu>
     <menu id="search">
-        <label xml:lang="de">OER suchen &amp; finden</label>
-        <label xml:lang="en">Search &amp; find OER</label>
+        <label xml:lang="de">Suchen &amp; finden</label>
+        <label xml:lang="en">Search &amp; find</label>
         <item href="/content/search/search-oer.xed" type="intern" replaceMenu="false" constrainPopUp="false">
             <label xml:lang="de">Erweiterte Suche</label>
             <label xml:lang="en">Extended query form</label>
@@ -49,8 +53,8 @@
         </item>
     </menu>
     <menu id="publish" dir="/content/publish">
-        <label xml:lang="de">OER veröffentlichen</label>
-        <label xml:lang="en">Publish OER</label>
+        <label xml:lang="de">Veröffentlichen</label>
+        <label xml:lang="en">Publish</label>
         <item href="/servlets/MCRActionMappingServlet/mods/create" type="intern" replaceMenu="false" constrainPopUp="false">
             <label xml:lang="de">OER veröffentlichen</label>
             <label xml:lang="en">Publish OER</label>
@@ -60,9 +64,12 @@
             <label xml:lang="en">Guidelines</label>
         </item>
     </menu>
-    <menu id="about" dir="/content/publish">
+    <menu id="about" dir="/content/about">
         <label xml:lang="de">Über uns</label>
         <label xml:lang="en">About us</label>
+        <item href="https://learninglab.uni-due.de/projekte/oer-ude" type="extern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">Projekt OER an der UDE</label>
+        </item>
     </menu>
     <menu id="user">
         <label xml:lang="de">Nutzermenü</label>

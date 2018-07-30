@@ -11,12 +11,6 @@
 
     <div id="header_box" class="clearfix container">
       <div id="options_nav_box" class="mir-prop-nav">
-        <nav>
-          <ul class="nav navbar-nav pull-right">
-            <xsl:call-template name="mir.loginMenu" />
-            <xsl:call-template name="mir.languageMenu" />
-          </ul>
-        </nav>
         <div id="ude-logo">
           <a href="https://www.uni-due.de/"><img src="{$WebApplicationBaseURL}images/ude-logo.png" alt="UDE-Logo" /></a>
         </div>
@@ -65,10 +59,25 @@
 
         <nav class="collapse navbar-collapse mir-main-nav-entries">
           <ul class="nav navbar-nav pull-left">
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='search']" />
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='browse']" />
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='publish']" />
+            <li>
+              <a href="{$WebApplicationBaseURL}">OER</a>
+            </li>
+            <xsl:for-each select="$loaded_navigation_xml/menu">
+              <xsl:choose>
+                <xsl:when test="@id='main'" /> <!-- Ignore some menus, they are shown elsewhere in the layout -->
+                <xsl:when test="@id='brand'" />
+                <xsl:when test="@id='below'" />
+                <xsl:when test="@id='user'" />
+                <xsl:otherwise>
+                  <xsl:apply-templates select="." />
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:for-each>
             <xsl:call-template name="mir.basketMenu" />
+          </ul>
+          <ul class="nav navbar-nav pull-right" style="margin-right:2ex;">
+            <xsl:call-template name="mir.loginMenu" />
+            <xsl:call-template name="mir.languageMenu" />
           </ul>
         </nav>
 
@@ -91,15 +100,25 @@
   <xsl:template name="mir.footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <ul class="internal_links nav navbar-nav">
+        <div class="col-md-2 col-sm-6">
+          <ul class="internal_links">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
           </ul>
         </div>
-        <div class="col-md-6 text-right">
-          <a href="https://www.uni-due.de/ub/"><img src="{$WebApplicationBaseURL}images/ub_logo_205.png" style="background-color: #e1e4f3;padding: 6.5px;" /></a>
+        <div class="col-md-10 col-sm-6 text-right">
+          <xsl:call-template name="mir.powered_by" />
           &#160;
-          <a href="https://www.uni-due.de/zim/"><img src="{$WebApplicationBaseURL}images/zimlogo_web_neu3.jpg" /></a>
+          <a href="https://www.uni-due.de/ub/">
+            <img src="{$WebApplicationBaseURL}images/ub_logo_205.png" style="background-color: #e1e4f3;padding: 6.5px;" alt="Universitätsbibliothek" />
+          </a>
+          &#160;
+          <a href="https://www.uni-due.de/zim/">
+            <img src="{$WebApplicationBaseURL}images/zimlogo_web_neu3.jpg" alt="Zentrum für Informations- und Mediendienste" />
+          </a>
+          &#160;
+          <a href="https://learninglab.uni-due.de/">
+            <img src="{$WebApplicationBaseURL}images/ll-claim.png" style="background-color: #e1e4f3; height:62px; padding: 0 3px 0 3px;" alt="Learning Lab" />
+          </a>
         </div>
       </div>
     </div>
@@ -107,11 +126,9 @@
 
   <xsl:template name="mir.powered_by">
     <xsl:variable name="mcr_version" select="concat('MyCoRe ',mcrver:getCompleteVersion())" />
-    <div id="powered_by">
-      <a href="http://www.mycore.de">
-        <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
-      </a>
-    </div>
+    <a href="http://www.mycore.de">
+      <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="Powered by MyCoRe" style="border: 5px solid #e1e4f3; padding: 10px;" />
+    </a>
   </xsl:template>
 
 </xsl:stylesheet>
