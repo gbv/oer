@@ -18,7 +18,7 @@
   <xed:template id="genre.repeated">
     <xed:load-resource name="mir_genres" uri="classification:metadata:-1:children:mir_genres" />
     <xed:repeat xpath="mods:genre[@type='intern']">
-      <xed:bind xpath="@authorityURI" set="$mir_genres/label[@xml:lang='x-uri']/@text" />
+      <xed:bind xpath="@authorityURI" set="{$mir_genres/label[@xml:lang='x-uri']/@text}" />
       <xed:bind xpath="@valueURIxEditor" initially="{$genre}">
         <div class="form-group {$xed-validation-marker}">
           <label class="col-md-3 control-label required">
@@ -199,6 +199,10 @@
         <mir:help-pmud help-text="{i18n:mir.help.rights}" />
       </div>
     </xed:bind>
+  </xed:template>
+
+  <xed:template id="validation-rules">
+    <xed:validate xpath="//mods:mods/mods:titleInfo/mods:title" required="true" i18n="mir.validation.title" display="global" />
   </xed:template>
 
 </xed:template>
