@@ -37,7 +37,7 @@
               Auch freie Materialien von Dritten können unter Beachtung des Urheberrechts hier veröffentlicht werden.
             </div>
             <div class="panel-footer">
-              <a href="../servlets/MCRActionMappingServlet/mods/create" class="btn btn-primary">Mein Lehrmaterial veröffentlichen ...</a>
+              <a href="../servlets/MCRActionMappingServlet/mods/create" class="btn btn-primary">Lehrmaterial veröffentlichen ...</a>
             </div>
           </div>        
         </div>
