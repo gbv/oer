@@ -202,4 +202,8 @@
     </xed:bind>
   </xed:template>
 
+  <xed:template id="validation-rules">
+    <xed:validate xpath="//mods:mods/mods:titleInfo/mods:title" required="true" i18n="mir.validation.title" display="global" />
+  </xed:template>
+
 </xed:template>

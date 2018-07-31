@@ -10,10 +10,12 @@
         <div class="col-md-offset-0 col-md-11 col-sm-offset-0 col-sm-12">
 
           <xed:form class="form-horizontal" role="form">
+
             <xed:cleanup-rule xpath="//condition" relevant-if="(string-length(@value) &gt; 0) or value[string-length(text()) &gt; 0 ]" />
             <xed:cleanup-rule xpath="//boolean" relevant-if="boolean|condition" />
             <xed:cleanup-rule xpath="//condition[@selectable='true']" relevant-if="@id = ../selectCondition/@keep" />
             <xed:cleanup-rule xpath="//*/@selectable|//selectCondition" relevant-if="false()" />
+            
             <xed:source uri="searchInput:{$id}" />
             
             <xed:bind xpath="query">
@@ -144,7 +146,7 @@
                       </div>
                     </xed:bind>
 
-                    <xed:bind xpath="condition1[@operator='contains']">
+                    <xed:bind xpath="condition[@id='text'][@operator='contains']">
                       <div class="form-group {$xed-validation-marker}">
                         <div class="col-md-4 col-sm-6">
                           <xed:bind xpath="@field" default="allMeta">
@@ -169,8 +171,7 @@
                       </div>
                     </xed:bind>
                   
-                    <xed:bind xpath="condition2[@operator='contains']">
-                      <xed:bind xpath="@field" set="mods.name" />
+                    <xed:bind xpath="condition[@field='mods.name'][@operator='contains']">
                       <div class="form-group {$xed-validation-marker}">
                         <label class="col-md-4 col-sm-6 control-label">
                           <xed:output i18n="mir.search.name" />
@@ -188,8 +189,7 @@
                       </div>
                     </xed:bind>
 
-                    <xed:bind xpath="condition3">
-                      <xed:bind xpath="@field" set="mods.dateIssued" />
+                    <xed:bind xpath="condition[@field='mods.dateIssued']">
                       <div class="form-group {$xed-validation-marker}">
                         <label class="col-md-4 col-sm-6 control-label">
                           <xed:output i18n="component.mods.metaData.dictionary.dateIssued" />:

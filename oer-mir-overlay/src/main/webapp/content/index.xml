@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE MyCoReWebPage>
+
 <MyCoReWebPage>
 
-  <section title="OER der Universität Duisburg-Essen" xml:lang="de">
-        <div class="jumbotwo" >
-            <div class="row">
-
-                <div class="col-xs-12">
-                    <h2>
-                      Open Educational Resources <br />
-                      der Universität Duisburg-Essen
-                    </h2>
-                    <p>
-                      Diese Seite befindet sich derzeit im Aufbau.
-                      <br />
-                      <a href="https://learninglab.uni-due.de/projekte/oer-ude" title="mehr Infos zum Projekt">
-                        <img src="../images/OER_4.png" alt="OER-Logo" style="margin:30px 0;" />
-                      </a>
-                    </p>
-                </div>
-
-            </div>
-        </div>
+  <!--
+    <a href="https://learninglab.uni-due.de/projekte/oer-ude" title="mehr Infos zum Projekt">
+      <img src="../images/OER_4.png" alt="OER-Logo" style="margin:30px 0;" />
+    </a>
+  -->
+						
+  <section xml:lang="de" title="OER der Universität Duisburg-Essen">                      
+    <h1>Open Educational Resources <small>an der Universität Duisburg-Essen</small></h1>
+    <div class="well">
+      Unter Open Educational Resources (OER) (deutsch: Offene Bildungsressourcen) verstehen wir digitale Lehr- und Lernmaterialien, 
+      die kostenlos und ohne weitere Restriktionen verfügbar gemacht werden, und die unter einer freien Lizenz veröffentlicht werden.
+      Die Universität Duisburg-Essen verfolgt in ihrer Strategie zur Digitalisierung in Studium und Lehre das Ziel, 
+      digitale Medien konsequent in Studienangeboten zu nutzen, um der Vielfalt der Studierenden besser gerecht zu werden. 
+      Die UDE sieht Open Educational Resources (OER) als Baustein, um optimale Bedingungen für das Lehren und Lernen 
+      in einer digitalisierten Welt zu schaffen.
+      <a href="publish/guidelines.xml">Mehr...</a>     
+    </div>
   </section>
-  <meta>
-    <log date="2017-11-22" time="11:12" labelPath=" » Start" lastEditor="Kathleen Neumann" />
-  </meta>
+  
+  <section xml:lang="de">
+    <div class="container" style="margin-top:5ex;">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <i class="fa fa-graduation-cap" style="margin-right:1ex;" aria-hidden="true" />
+                Ihre Lehrmaterialien frei online veröffentlichen
+              </h3>
+            </div>
+            <div class="panel-body">
+              Hier können Sie selbsterstellte Materialien unter einer freien Lizenz der Öffentlichkeit zugänglich zu machen.
+              Auch freie Materialien von Dritten können unter Beachtung des Urheberrechts hier veröffentlicht werden.
+            </div>
+            <div class="panel-footer">
+              <a href="../servlets/MCRActionMappingServlet/mods/create" class="btn btn-primary">Lehrmaterial veröffentlichen ...</a>
+            </div>
+          </div>        
+        </div>
+        <div class="col-md-5 col-md-offset-1">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <i class="fa fa-search" style="margin-right:1ex;" aria-hidden="true" />
+                Freie Lehrmaterialien der UDE finden
+              </h3>
+            </div>
+            <div class="panel-body">
+               Interessierte können hier nach veröffentlichten Lehrmaterialien nach Fachgebiet, Schlagworten, Sprache oder weiteren Kriterien suchen. 
+               Die Inhalte sind unter einer Creative Commons Lizenz nutzbar. 
+            </div>
+            <div class="panel-footer">
+              <a href="search/search-oer.xed" class="btn btn-primary">Lehrmaterialien finden ...</a>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </div>
+  </section>
+
 </MyCoReWebPage>
