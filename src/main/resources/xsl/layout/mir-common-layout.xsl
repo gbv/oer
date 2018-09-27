@@ -39,9 +39,9 @@
 
   <xsl:template name="mir.loginMenu">
     <xsl:variable xmlns:encoder="xalan://java.net.URLEncoder" name="loginURL"
-      select="concat( $WebApplicationBaseURL, 'authorization/login.xed',$HttpSession,'?url=', encoder:encode( string( $RequestURL ) ) )" />
+      select="concat( $ServletsBaseURL, 'MCRLoginServlet',$HttpSession,'?url=', encoder:encode( string( $RequestURL ) ) )" />
     <xsl:choose>
-      <xsl:when test="( contains($RequestURL, 'login.xed') or contains($RequestURL, 'MCRLoginServlet') ) and mcrxsl:isCurrentUserGuestUser()"></xsl:when>
+      <xsl:when test="contains($RequestURL, 'MCRLoginServlet') and mcrxsl:isCurrentUserGuestUser()"></xsl:when>
       <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
         <li>
           <a id="loginURL" href="{$loginURL}">
@@ -268,7 +268,15 @@
       <xsl:value-of select="$CurrentLang" />
       <xsl:text>';</xsl:text>
     </script>
+    <script>
+      window["mycoreUploadSettings"] = {
+      webAppBaseURL:"<xsl:value-of select='$WebApplicationBaseURL' />"
+      }
+    </script>
     <script src="{$WebApplicationBaseURL}js/mir/session-polling.js" type="text/javascript"></script>
+    <script src="{$WebApplicationBaseURL}modules/webtools/upload/js/upload-api.js"></script>
+    <script src="{$WebApplicationBaseURL}modules/webtools/upload/js/upload-gui.js"></script>
+    <link rel="stylesheet" type="text/css" href="{$WebApplicationBaseURL}modules/webtools/upload/css/upload-gui.css" />
   </xsl:template>
 
   <xsl:template name="print.statusMessage" >

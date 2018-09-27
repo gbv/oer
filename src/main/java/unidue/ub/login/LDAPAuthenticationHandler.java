@@ -138,7 +138,7 @@ public class LDAPAuthenticationHandler extends AuthenticationHandler {
     private DirContext getDirContext(String uid, String credentials) throws NamingException {
         try {
             Hashtable<String, String> env = (Hashtable<String, String>) (ldapEnvironment.clone());
-            env.put(Context.SECURITY_PRINCIPAL, String.format(baseDN, uid));
+            env.put(Context.SECURITY_PRINCIPAL, String.format(Locale.ROOT,baseDN, uid));
             env.put(Context.SECURITY_CREDENTIALS, credentials);
             return new InitialDirContext(env);
         } catch (AuthenticationException ex) {
@@ -161,7 +161,7 @@ public class LDAPAuthenticationHandler extends AuthenticationHandler {
         controls.setSearchScope(SearchControls.SUBTREE_SCOPE);
 
         String uid = user.getUserName();
-        String principal = String.format(baseDN, uid);
+        String principal = String.format(Locale.ROOT, baseDN, uid);
         String filter = String.format(Locale.ROOT, uidFilter, uid);
 
         NamingEnumeration<SearchResult> results = ctx.search(principal, filter, controls);

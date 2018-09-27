@@ -64,12 +64,12 @@
             </li>
             <xsl:for-each select="$loaded_navigation_xml/menu">
               <xsl:choose>
-                <xsl:when test="@id='main'" /> <!-- Ignore some menus, they are shown elsewhere in the layout -->
-                <xsl:when test="@id='brand'" />
-                <xsl:when test="@id='below'" />
-                <xsl:when test="@id='user'" />
+                <xsl:when test="@id='main'"/> <!-- Ignore some menus, they are shown elsewhere in the layout -->
+                <xsl:when test="@id='brand'"/>
+                <xsl:when test="@id='below'"/>
+                <xsl:when test="@id='user'"/>
                 <xsl:otherwise>
-                  <xsl:apply-templates select="." />
+                  <xsl:apply-templates select="."/>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:for-each>
@@ -100,25 +100,38 @@
   <xsl:template name="mir.footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-2 col-sm-6">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <h4>Über uns</h4>
+          <p>
+            MIR ein klassicher institutioneller Publikations- bzw.
+            Dokumentenserver. Es basiert auf dem Repository-Framework
+            MyCoRe und dem Metadata Object Description Schema (MODS).
+            <span class="read_more">
+              <a href="http://mycore.de/generated/mir/">Mehr erfahren ...</a>
+            </span>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <h4>Navigation</h4>
           <ul class="internal_links">
-            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
+            <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='brand']/*" />
           </ul>
         </div>
-        <div class="col-md-10 col-sm-6 text-right">
-          <xsl:call-template name="mir.powered_by" />
-          &#160;
-          <a href="https://www.uni-due.de/ub/">
-            <img src="{$WebApplicationBaseURL}images/ub_logo_205.png" style="background-color: #e1e4f3;padding: 6.5px;" alt="Universitätsbibliothek" />
-          </a>
-          &#160;
-          <a href="https://www.uni-due.de/zim/">
-            <img src="{$WebApplicationBaseURL}images/zimlogo_web_neu3.jpg" alt="Zentrum für Informations- und Mediendienste" />
-          </a>
-          &#160;
-          <a href="https://learninglab.uni-due.de/">
-            <img src="{$WebApplicationBaseURL}images/ll-claim.png" style="background-color: #e1e4f3; height:62px; padding: 0 3px 0 3px;" alt="Learning Lab" />
-          </a>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <h4>Netzwerke</h4>
+          <ul class="social_links">
+            <li><a href="#"><button type="button" class="social_icons social_icon_fb"></button>Facebook</a></li>
+            <li><a href="#"><button type="button" class="social_icons social_icon_tw"></button>Twitter</a></li>
+            <li><a href="#"><button type="button" class="social_icons social_icon_gg"></button>Google+</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-3 col-md-2">
+          <h4>Layout based on</h4>
+          <ul class="internal_links">
+            <li><a href="{$WebApplicationBaseURL}mir-layout/template/flatmir.xml">flatmir</a></li>
+            <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+            <li><a href="http://bootswatch.com/">Bootswatch</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -126,9 +139,11 @@
 
   <xsl:template name="mir.powered_by">
     <xsl:variable name="mcr_version" select="concat('MyCoRe ',mcrver:getCompleteVersion())" />
-    <a href="http://www.mycore.de">
-      <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="Powered by MyCoRe" style="border: 5px solid #e1e4f3; padding: 10px;" />
-    </a>
+    <div id="powered_by">
+      <a href="http://www.mycore.de">
+        <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_small_invert.png" title="{$mcr_version}" alt="powered by MyCoRe" />
+      </a>
+    </div>
   </xsl:template>
 
 </xsl:stylesheet>

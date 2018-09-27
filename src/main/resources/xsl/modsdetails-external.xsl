@@ -15,7 +15,7 @@
                 xmlns:acl="xalan://org.mycore.access.MCRAccessManager"
                 xmlns:imageware="org.mycore.mir.imageware.MIRImageWarePacker"
                 xmlns:pi="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
-                xmlns:piUtil="xalan://org.mycore.mir.pi.MCRPIUtil"
+                xmlns:piUtil="xalan://org.mycore.pi.frontend.MCRIdentifierXSLUtils"
                 exclude-result-prefixes="basket xalan xlink mcr i18n mods mcrmods mcrxsl str encoder acl imageware pi"
                 xmlns:ex="http://exslt.org/dates-and-times"
                 xmlns:exslt="http://exslt.org/common"
@@ -384,7 +384,6 @@
     <xsl:param name="displayAddDerivate" select="'true'" />
     <xsl:param name="layout" select="'$'" />
     <xsl:param name="mods-type" select="'report'" />
-    <xsl:param name="collection" select="substring-after(metadata/def.modsContainer/modsContainer/mods:mods/mods:classification[contains(@authorityURI,'classifications/collection')]/@valueURI,'#')" />
     <xsl:variable name="layoutparam">
       <xsl:if test="$layout != '$'">
         <xsl:value-of select="concat('&amp;layout=',$layout)" />
@@ -393,7 +392,6 @@
     <xsl:variable name="editURL">
       <xsl:call-template name="mods.getObjectEditURL">
         <xsl:with-param name="id" select="$id" />
-        <xsl:with-param name="collection" select="$collection" />
         <xsl:with-param name="layout" select="$layout" />
       </xsl:call-template>
     </xsl:variable>
@@ -403,7 +401,6 @@
     <xsl:variable name="editURL_allMods">
       <xsl:call-template name="mods.getObjectEditURL">
         <xsl:with-param name="id" select="$id" />
-        <xsl:with-param name="collection" select="$collection" />
         <xsl:with-param name="layout" select="'all'" />
       </xsl:call-template>
     </xsl:variable>
@@ -445,7 +442,7 @@
           <xsl:choose>
             <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
               <li>
-                <a href="{$WebApplicationBaseURL}authorization/login.xed?action=login">
+                <a href="{$ServletsBaseURL}MCRLoginServlet?action=login">
                   <xsl:value-of select="i18n:translate('mir.actions.noaccess')" />
                 </a>
               </li>
@@ -453,7 +450,7 @@
             <xsl:otherwise>
               <xsl:if test="not($accessedit or $accessdelete)">
                 <li>
-                  <a href="{$WebApplicationBaseURL}authorization/login.xed?action=login">
+                  <a href="{$ServletsBaseURL}MCRLoginServlet?action=login">
                     <xsl:value-of select="i18n:translate('mir.actions.norights')" />
                   </a>
                 </li>
@@ -501,8 +498,8 @@
                 </xsl:choose>
                 <xsl:if test="$displayAddDerivate='true'">
                   <li>
-                    <a href="{$ServletsBaseURL}derivate/create{$HttpSession}?id={$id}">
-                      <xsl:value-of select="i18n:translate('derivate.addDerivate')" />
+                    <a onclick="javascript: $('.drop-to-object-optional').toggle();">
+                      <xsl:value-of select="i18n:translate('mir.upload.addDerivate')" />
                     </a>
                   </li>
                 </xsl:if>
@@ -576,14 +573,14 @@
                   <xsl:text>|</xsl:text>
                 </xsl:for-each>
               </xsl:variable>
-              <xsl:message>
+              <!-- xsl:message>
                 mods-type:
                 <xsl:value-of select="$mods-type" />
                 child-layout:
                 <xsl:value-of select="$child-layout" />
                 accessedit:
                 <xsl:value-of select="$accessedit" />
-              </xsl:message>
+              </xsl:message -->
               <!-- actionmapping.xml must be available for this functionality -->
               <xsl:if test="string-length($child-layout) &gt; 0 and $accessedit and mcrxsl:resourceAvailable('actionmappings.xml')">
 
@@ -669,6 +666,31 @@
         </ul>
       </div>
     </div>
+    <div class="modal fade" id="modal-pi" tabindex="-1" role="dialog" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" data-i18n="component.pi.register."></h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-2">
+                <i class="fa fa-question-circle"></i>
+              </div>
+              <div class="col-md-10" data-i18n="component.pi.register.modal.text."></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default modal-pi-cancel" data-dismiss="modal">
+              <xsl:value-of select="i18n:translate('component.pi.register.modal.abort')" />
+            </button>
+            <button type="button" class="btn btn-danger" id="modal-pi-add"
+                    data-i18n="component.pi.register.">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </xsl:template>
 
   <xsl:template match="derobject" mode="derivateActions">
@@ -730,7 +752,7 @@
                 </a>
               </li>
             </xsl:if>
-            <xsl:if test="key('rights', $deriv)/@write">
+            <!--<xsl:if test="key('rights', $deriv)/@write">
               <li>
                 <xsl:if test="not(key('rights', $deriv)/@delete)">
                   <xsl:attribute name="class">last</xsl:attribute>
@@ -746,7 +768,7 @@
                   </xsl:otherwise>
                 </xsl:choose>
               </li>
-            </xsl:if>
+            </xsl:if>-->
             <xsl:if test="key('rights', $deriv)/@delete and not($hasManagedPI)">
               <li class="last">
                 <a href="{$ServletsBaseURL}derivate/delete{$HttpSession}?id={$deriv}" class="confirm_deletion option" data-text="{i18n:translate('mir.confirm.derivate.text')}">

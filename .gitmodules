@@ -1,0 +1,4 @@
+[submodule "src/main/solr"]
+	path = src/main/solr
+	url = https://github.com/MyCoRe-Org/mir-solr.git
+	branch = master

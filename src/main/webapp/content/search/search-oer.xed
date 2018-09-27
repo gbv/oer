@@ -136,7 +136,7 @@
                               <option value="">
                                 <xed:output i18n="mir.select" />
                               </option>
-                              <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:rfc4646" />
+                              <xed:include uri="xslStyle:items2options:classification:editorComplete:2:children:rfc5646" />
                             </select>
                             <span data-html="true" data-toggle="tooltip" class="input-group-addon" title="{i18n:duepublico.form.faculty.tooltip}">
                               <i class="fa fa-info-circle" />
