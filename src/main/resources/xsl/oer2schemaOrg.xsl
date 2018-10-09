@@ -24,14 +24,34 @@
 >
 
 
-  <xsl:template match="mods:genre[@authorityURI='http://www.mycore.org/classifications/mir_genres']" mode="extension">
-    <fn:string key="learningResourceType">
-      <xsl:variable name="trimmed" select="substring-after(normalize-space(@valueURI),'#')" />
-      <xsl:variable name="genreURI"
-                    select="concat('classification:metadata:0:children:mir_genres:',$trimmed)" />
-      <xsl:value-of select="document($genreURI)//category/label[@xml:lang='en']/@text" />
+  <xsl:template match="mods:genre[@authorityURI='http://www.mycore.org/classifications/mir_genres'][1]" mode="extension">
+    <xsl:choose>
+      <xsl:when test="count(../mods:genre[@authorityURI='http://www.mycore.org/classifications/mir_genres']) &gt; 1">
+        <fn:array key="learningResourceType">
+          <xsl:for-each select="mods:genre[@authorityURI='http://www.mycore.org/classifications/mir_genres']">
+            <xsl:call-template name="printLearningResource">
+              <xsl:with-param name="valueURI" select="@valueURI" />
+            </xsl:call-template>
+          </xsl:for-each>
+        </fn:array>
+      </xsl:when>
+      <xsl:otherwise>
+        <fn:string key="learningResourceType">
+          <xsl:call-template name="printLearningResource">
+            <xsl:with-param name="valueURI" select="@valueURI" />
+          </xsl:call-template>
+        </fn:string>
+      </xsl:otherwise>
+    </xsl:choose>
 
-    </fn:string>
+  </xsl:template>
+
+  <xsl:template name="printLearningResource">
+    <xsl:param name="valueURI" />
+    <xsl:variable name="trimmed" select="substring-after(normalize-space($valueURI),'#')" />
+    <xsl:variable name="genreURI"
+                  select="concat('classification:metadata:0:children:mir_genres:',$trimmed)" />
+    <xsl:value-of select="document($genreURI)//category/label[@xml:lang='en']/@text" />
   </xsl:template>
 
 </xsl:stylesheet>
