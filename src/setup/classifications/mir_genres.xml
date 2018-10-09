@@ -1,92 +1,114 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mir_genres">
-  <label xml:lang="en" text="genre" description="A list of material types" />
-  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/mir_genres" />
   <label xml:lang="de" text="Genre" description="Liste der Materialarten" />
+  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/mir_genres" />
+  <label xml:lang="en" text="genre" description="A list of material types" />
   <categories>
     <category ID="worksheet">
       <label xml:lang="en" text="Worksheet" />
       <label xml:lang="de" text="Arbeitsblatt" />
+      <label xml:lang="x-mapping" text="schemaOrg:DigitalDocument" />
     </category>
     <category ID="working_material">
       <label xml:lang="en" text="Working Material" />
       <label xml:lang="de" text="Arbeitsmaterial" />
+      <label xml:lang="x-mapping" text="schemaOrg:CreativeWork" />
     </category>
     <category ID="audio">
       <label xml:lang="en" text="Audio" />
       <label xml:lang="de" text="Audio" />
+      <label xml:lang="x-mapping" text="schemaOrg:AudioObject" />
     </category>
     <category ID="picture">
       <label xml:lang="de" text="Bild/Grafik" />
       <label xml:lang="en" text="Picture" />
+      <label xml:lang="x-mapping" text="schemaOrg:ImageObject" />
     </category>
     <category ID="podcast">
       <label xml:lang="de" text="Podcast" />
       <label xml:lang="en" text="Podcast" />
+      <label xml:lang="x-mapping" text="schemaOrg:AudioObject" />
     </category>
     <category ID="experiment">
       <label xml:lang="en" text="Experiment" />
       <label xml:lang="de" text="Experiment" />
+      <label xml:lang="x-mapping" text="schemaOrg:CreativeWork" />
     </category>
     <category ID="map">
       <label xml:lang="en" text="Map" />
       <label xml:lang="de" text="Karte" />
+      <label xml:lang="x-mapping" text="schemaOrg:Map" />
     </category>
     <category ID="reference_work">
       <label xml:lang="en" text="Reference Work" />
       <label xml:lang="de" text="Nachschlagewerk" />
+      <label xml:lang="x-mapping" text="schemaOrg:CreativeWork" />
     </category>
     <category ID="interactive_material">
       <label xml:lang="en" text="Interactive Material" />
       <label xml:lang="de" text="Interaktives Material" />
+      <label xml:lang="x-mapping" text="schemaOrg:CreativeWork" />
     </category>
     <category ID="instruction">
       <label xml:lang="en" text="Instruction" />
       <label xml:lang="de" text="Kurs" />
+      <label xml:lang="x-mapping" text="schemaOrg:Course" />
     </category>
     <category ID="learning_game">
       <label xml:lang="en" text="Learning Game" />
       <label xml:lang="de" text="Lernspiel" />
+      <label xml:lang="x-mapping" text="schemaOrg:Game" />
     </category>
     <category ID="portal">
       <label xml:lang="en" text="Portal" />
       <label xml:lang="de" text="Portal" />
+      <label xml:lang="x-mapping" text="schemaOrg:WebSite" />
     </category>
     <category ID="presentation">
       <label xml:lang="en" text="Presentation" />
       <label xml:lang="de" text="Präsentation" />
+      <label xml:lang="x-mapping" text="schemaOrg:PresentationDigitalDocument" />
     </category>
     <category ID="project">
       <label xml:lang="en" text="Project" />
       <label xml:lang="de" text="Projekt" />
+      <label xml:lang="x-mapping" text="schemaOrg:CreativeWork" />
     </category>
     <category ID="game">
       <label xml:lang="en" text="Role Playing Game" />
       <label xml:lang="de" text="Rollenspiel/Planspiel" />
+      <label xml:lang="x-mapping" text="schemaOrg:Game" />
     </category>
     <category ID="simulation">
       <label xml:lang="en" text="Simulation" />
       <label xml:lang="de" text="Simulation" />
+      <label xml:lang="x-mapping" text="schemaOrg:CreativeWork" />
     </category>
     <category ID="exercise">
       <label xml:lang="en" text="Exercise" />
       <label xml:lang="de" text="Übung" />
+      <label xml:lang="x-mapping" text="schemaOrg:CreativeWork" />
     </category>
     <category ID="lesson_planning">
       <label xml:lang="en" text="Lesson Planning" />
       <label xml:lang="de" text="Unterrichtsplanung" />
+      <label xml:lang="x-mapping" text="schemaOrg:CreativeWork" />
     </category>
     <category ID="video">
       <label xml:lang="de" text="Video" />
       <label xml:lang="en" text="Video" />
+      <label xml:lang="x-mapping" text="schemaOrg:VideoObject" />
     </category>
     <category ID="webquest">
       <label xml:lang="de" text="Webquest" />
       <label xml:lang="en" text="Webquest" />
+      <label xml:lang="x-mapping" text="schemaOrg:CreativeWork" />
     </category>
     <category ID="other">
       <label xml:lang="de" text="Sonstiges" />
       <label xml:lang="en" text="Other" />
+      <label xml:lang="x-mapping" text="SchemaOrg: CreativeWork" />
     </category>
   </categories>
 </mycoreclass>
