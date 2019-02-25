@@ -39,9 +39,9 @@
 
   <xsl:template name="mir.loginMenu">
     <xsl:variable xmlns:encoder="xalan://java.net.URLEncoder" name="loginURL"
-      select="concat( $ServletsBaseURL, 'MCRLoginServlet',$HttpSession,'?url=', encoder:encode( string( $RequestURL ) ) )" />
+      select="concat( $WebApplicationBaseURL, 'authorization/login.xed',$HttpSession,'?url=', encoder:encode( string( $RequestURL ) ) )" />
     <xsl:choose>
-      <xsl:when test="contains($RequestURL, 'MCRLoginServlet') and mcrxsl:isCurrentUserGuestUser()"></xsl:when>
+      <xsl:when test="( contains($RequestURL, 'login.xed') or contains($RequestURL, 'MCRLoginServlet') ) and mcrxsl:isCurrentUserGuestUser()" />
       <xsl:when test="mcrxsl:isCurrentUserGuestUser()">
         <li>
           <a id="loginURL" href="{$loginURL}">
