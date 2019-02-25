@@ -1,8 +1,10 @@
-Sitemap: https://oer.ub.uni-due.de/sitemap_google.xml
 User-agent: *
+Crawl-delay: 10
 Allow: /servlets/MCRFileNodeServlet/
 Disallow: /*?
 Disallow: /servlets/
 Disallow: /browse/
 Disallow: /rsc/
 Disallow: /api/
+Disallow: /awstats/
+Sitemap: https://oer.uni-due.de/sitemap_google.xml
