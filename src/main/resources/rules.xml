@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<or>
+  <role>admin</role>
+  <and>
+    <status>published</status>
+    <action>read</action>
+  </and>
+  <and>
+    <status>submitted</status>
+    <createdBy>currentUser</createdBy>
+    <or>
+      <action>read</action>
+      <action>write</action>
+      <action>delete</action>
+    </or>
+  </and>
+</or>
