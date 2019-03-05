@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MyCoReWebPage>
+  <section xml:lang="de" title="Über uns">
+    <div>
+      <h2>Über uns</h2>
+      <p>
+        In der Bereitstellung und Nutzung von Open Educational Resources (OER) sieht die Universität Duisburg-Essen einen
+        wichtigen Baustein, um dem Anspruch als offene Universität gerecht zu werden. Die Erstellung von OER Lehr- und
+        Lernmaterialien ermöglicht einen kooperativen Austausch mit Lehrenden und Studierenden. Zugangsbarrieren zu
+        Bildungsangeboten werden auf diese Weise reduziert und für neue Zielgruppen zugänglich gemacht. Durch OER bietet sich
+        die Chance Transparenz in der Lehre herzustellen sowie die Qualität von Lehr- und Lernmaterialien zu steigern bzw. 
+        das Angebot zu erweitern.
+      </p>
+      <p>
+        Das OER-Repository ist Teil der 
+        <a href="https://www.uni-due.de/e-learning/digitalisierungsstrategie.php">Strategie zur Digitalisierung in Studium und Lehre</a> 
+        an der UDE und wurde gemeinsam mit dem
+        <a href="https://www.uni-due.de/ub/publikationsdienste/">Dezernat Digitale Bibliothek der Universitätsbibliothek (UB)</a>
+        und dem 
+        <a href="https://www.uni-due.de/zim/organisation/lt.php">Geschäftsbereich Lerntechnologien des Zentrums für Medien- und Informationsdienste (ZIM)</a> 
+        konzipiert und umgesetzt. 
+        Das Repository basiert auf dem Open Source Framework <a href="http://www.mycore.de">MyCoRe</a>.
+        Die technische Umsetzung des Projekts erfolgte in Kooperation mit der 
+        <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service">Verbundzentrale des Gemeinsamen Bibliotheksverbunds (VZG), Göttingen</a>. 
+        Konzeptionell gerahmt wurde die Erstellung des Repositorys im
+        Projekt 
+        <a href="https://learninglab.uni-due.de/projekte/oer-ude">„OER-UDE: Open Educational Resources an der UDE“</a>
+        (2016-2018), am Learning Lab von Prof. Dr. Michael Kerres.
+        In diesem Projekt wurden Informationsworkshops zum Thema OER durchgeführt und überprüft, wie OER-Materialien
+        verstärkt in die Lehre an der UDE eingebunden werden können.
+      </p>
+      <p>
+        Ansprechperson für die Strategie zur Digitalisierung in Studium und Lehre an der UDE:<br/>
+        Dipl.-Päd. Marianne Wefelnberg<br/>
+        <a href="mailto:marianne.wefelnberg@uni-due.de">marianne.wefelnberg@uni-due.de</a>
+      </p>
+    </div>                      
+  </section>
+</MyCoReWebPage>
