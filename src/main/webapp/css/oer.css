@@ -131,3 +131,24 @@ html body #powered_by {
   background-image: none;
   border: 2px solid #dce4ec;
 }
+
+/* ----------------------------------------------------------------------------
+   Shariff social media linking
+---------------------------------------------------------------------------- */
+
+div.shariff span.share_text {
+	display: none;
+}
+
+div.shariff li.shariff-button {
+	display: inline;
+	min-width: 30px !important;
+	margin-left: 0px;
+	flex-grow: 0;
+}
+
+div.shariff a {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+}
