@@ -1,44 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MyCoReWebPage><section xml:lang="de" title="Leitlinie Publikationsserver"><div>
-<h1><strong>Leitlinien des OER-Repositories</strong> <br />
- </h1>
 
-<p>Dieses Repository dient Lehrenden als Ort, um selbsterstellte Materialien unter einer freien Lizenz der Öffentlichkeit zugänglich zu machen und frei lizenzierte Materialien für eigene Verwendungszwecke zu finden. Auch Materialien von Dritten können unter der Angabe des Urhebers hier veröffentlicht werden, sofern keine Urheberrechte verletzt werden.</p>
+<MyCoReWebPage>
 
-<h2><strong>Ziele </strong></h2>
+<section xml:lang="de" title="Leitlinien des OER-Repositories">
 
-<p>Unter Open Educational Resources (OER) (deutsch: Offene Bildungsressourcen) verstehen wir digitale Lehr- und Lernmaterialien, die kostenlos und ohne weitere Restriktionen verfügbar gemacht werden, und die unter einer freien Lizenz veröffentlicht werden.</p>
+<div>
 
-<p>Die Universität Duisburg-Essen verfolgt in ihrer <u>E-Learning Strategie</u> das Ziel, digitale Medien konsequent in Studienangeboten zu nutzen, um der Vielfalt der Studierenden besser gerecht zu werden. Die UDE sieht Open Educational Resources (OER) als Baustein an, um optimale Bedingungen für das Lehren und Lernen in einer digitalisierten Welt zu schaffen. Den Potenzialen, die mit der Digitalisierung einhergehen, stehen häufig urheberrechtliche Bedenken seitens der Lehrenden oder die schwere Auffindbarkeit hochqualitativer Materialien entgegen. OER und ihre Verbreitung und Verwendung sind daher Bestandteil der E-Learning-Strategie der UDE.</p>
+<h1>
+  <strong>Leitlinien des OER-Repositories</strong>
+</h1>
 
-<p>Nähere Informationen zur OER-Strategie der UDE finden Sie <a href="https://learninglab.uni-due.de/projekte/oer-ude" title=""><u>hier</u></a>.</p>
+<h2>
+  <strong>Ziele </strong>
+</h2>
 
-<h2><strong>Welche Materialien können eingestellt werden?</strong></h2>
+<p>
+  Unter Open Educational Resources (OER) (deutsch: Offene Bildungsressourcen) verstehen wir digitale Lehr- und
+  Lernmaterialien, die kostenlos und ohne weitere Restriktionen verfügbar gemacht werden, und die unter einer freien
+  Lizenz veröffentlicht werden.
+  Die Universität Duisburg-Essen verfolgt in ihrer 
+  <a href="https://www.uni-due.de/e-learning/digitalisierungsstrategie.php">Strategie zur Digitalisierung in Studium und Lehre</a> 
+  das Ziel, digitale Medien konsequent in Studienangeboten zu nutzen, 
+  um der Vielfalt der Studierenden besser gerecht zu werden. 
+  Die UDE sieht Open Educational Resources (OER) als Baustein, 
+  um optimale Bedingungen für das Lehren und Lernen in einer digitalisierten Welt zu schaffen. 
+</p>
+<p>
+  Dieses Repository dient Lehrenden der Universität Duisburg-Essen als Ort, 
+  um selbsterstellte Lehrmaterialen unter einer freien Lizenz der Öffentlichkeit zugänglich zu machen.
+  Dazu werden die veröffentlichten Inhalte über verschiedene, offene Schnittstellen und standardisierte Metadatenformate
+  Suchmaschinen und externen Diensten zugänglich gemacht. 
+  Auch freie Materialien von Dritten können unter Beachtung des Urheberrechts hier veröffentlicht werden.  
+  Interessierte und Lehrende weltweit können veröffentlichte Materialien 
+  für eigene Verwendungszwecke finden, herunterladen und unter einer freien Lizenz nutzen. 
+</p>
 
-<p>Das Repository dient der Veröffentlichung elektronischer Lehr- und Lernmaterialien. Dies können Dokumente jeglicher Art im Text-, Grafik-, Video oder Audioformat sein. Veröffentlicht werden können digitale Lehrmaterialien, die unter einer freien Lizenz weltweit öffentlich zugänglich gemacht werden sollen.</p>
+<h2>
+  <strong>Welche Materialien können eingestellt werden?</strong>
+</h2>
 
-<p>Lehrmaterialien, die im Kontext einer Lehrveranstaltung stehen und insbesondere aus urheberrechtlichen Gründen nur einem begrenzten Nutzerkreis verfügbar gemacht werden dürfen, können weiterhin über die <u>Lernplattform Moodle</u> oder die <u>Online-Semesterapparate</u> der UB  bereitgestellt werden. Klassische E-Publikationen, auch solche <em>über</em> OER, und Qualifizierungsarbeiten können über den Dokumenten- und Publikationsserver <u>DuEPublico</u> veröffentlicht werden.</p>
+<p>
+  Das Repository dient der Veröffentlichung elektronischer Lehr- und Lernmaterialien. Dies können Dokumente jeglicher
+  Art im Text-, Grafik-, Video oder Audioformat sein. Veröffentlicht werden können digitale Lehrmaterialien, die unter
+  einer freien Lizenz weltweit öffentlich zugänglich gemacht werden sollen.
+</p>
 
-<p>Eine inhaltliche Qualitätskontrolle erfolgt seitens der Betreiber nicht. Diese liegt in der Verantwortung der veröffentlichenden MitarbeiterInnen/AutorInnen der Universität. Studentische Arbeiten werden nur auf ausdrückliche Empfehlung eines Lehrstuhlinhabers aufgenommen.</p>
+<p>
+  Lehrmaterialien, die im Kontext einer Lehrveranstaltung stehen 
+  und insbesondere aus urheberrechtlichen Gründen nur einem begrenzten Nutzerkreis verfügbar gemacht werden dürfen, 
+  können weiterhin über die <a href="https://moodle.uni-due.de/">Lernplattform Moodle</a>
+  oder die <a href="https://semapp.uni-due.de">Online-Semesterapparate der UB</a> bereitgestellt werden. 
+  Klassische E-Publikationen, auch solche
+  <em>über OER</em>, und Qualifizierungsarbeiten können über den 
+  <a href="https://duepublico2.uni-due.de">Dokumenten- und Publikationsserver DuEPublico</a>
+  veröffentlicht werden.
+</p>
 
-<h2><strong>Welche Dateiformate können im Repository hochgeladen werden?</strong></h2>
+<p>
+  Eine inhaltliche Qualitätskontrolle erfolgt seitens der Betreiber nicht. Diese liegt in der Verantwortung der
+  veröffentlichenden MitarbeiterInnen/AutorInnen. Studentische Arbeiten werden nur auf ausdrückliche
+  Empfehlung eines Lehrstuhlinhabers aufgenommen.
+</p>
 
-<p>Bezüglich des Dateiformats bestehen keine Vorschriften. Die UDE als Betreiber spricht jedoch Empfehlungen aus, um die Verwendbarkeit des Materials zu gewährleisten.</p>
+<h2>
+  <strong>Welche Dateiformate können im Repository hochgeladen werden?</strong>
+</h2>
 
-<p>Die Materialien sollten in weit verbreiteten, möglichst gut weiterbearbeitbaren, konvertierbaren und mit freier Software darstellbaren Dateiformaten veröffentlicht werden. PDF-Dateien sollten im Format PDF/A, frei von Schutzmaßnahmen (z .B. Kennwortschutz, Digital Rights Management) bereitgestellt werden. Für Videos empfehlen wir das Format MP4, für Audio-Dateien MP3. </p>
+<p>
+  Bezüglich des Dateiformats bestehen keine Vorschriften. 
+  Die UDE als Betreiber spricht jedoch Empfehlungen aus, um die
+  Verwendbarkeit des Materials zu gewährleisten.
+</p>
 
-<h2><strong>Welche </strong><strong>rechtlichen Erfordernisse müssen beachtet werden?</strong></h2>
+<p>
+  Die Materialien sollten in weit verbreiteten, möglichst gut weiterbearbeitbaren, konvertierbaren und mit freier
+  Software darstellbaren Dateiformaten veröffentlicht werden. PDF-Dateien sollten im Format PDF/A, frei von
+  Schutzmaßnahmen (z .B. Kennwortschutz, Digital Rights Management) bereitgestellt werden. Für Videos empfehlen wir das
+  Format MP4, für Audio-Dateien MP3.
+</p>
 
-<p>Es dürfen keine Inhalte hochgeladen werden, deren Bereitstellung, Veröffentlichung und Nutzung gegen strafrechtliche Bestimmungen, Urheber-, Marken-, Kennzeichnungs- oder Persönlichkeitsrechte verstößt oder die als wettbewerbsrechtlich unzulässig anzusehen sind. Für die zur Verfügung gestellten Inhalte ist die hochladende Person verantwortlich. Mit dem Hochladen bestätigen Sie, dass Sie keine Urheberrechte verletzt haben und über die Nutzungsrechte am Material verfügen.</p>
+<h2>
+  <strong>Welche rechtlichen Erfordernisse müssen beachtet werden?</strong>
+</h2>
 
-<p>Laden Sie deshalb nur Inhalte hoch, die Sie selbst erstellt haben, oder bei denen Sie über die erforderlichen Nutzungsrechte zur Veröffentlichung, Nutzung, Verbreitung, Vervielfältigung und der öffentlichen Wiedergabe verfügen. Dazu zählen insbesondere Inhalte, die bereits unter einer Creative Commons Lizenz veröffentlicht wurden. Achten Sie darauf, dass Ihre Materialien keine Inhalte, bspw. Abbildungen, Fotos oder Videos beinhalten, die urherber- oder markenrechtlich  geschützt sind, die Persönlichkeitsrechte oder datenschutzrechtliche Bestimmungen verletzen.</p>
+<p>
+  Es dürfen keine Inhalte hochgeladen werden, deren Bereitstellung, Veröffentlichung und Nutzung gegen 
+  Urheber-, Marken-, Kennzeichnungs- oder Persönlichkeitsrechte verstößt oder die als wettbewerbsrechtlich
+  unzulässig anzusehen sind. Für die zur Verfügung gestellten Inhalte ist die hochladende Person verantwortlich. Mit dem
+  Hochladen bestätigen Sie, dass Sie keine Urheberrechte verletzt haben und über die Nutzungsrechte am Material
+  verfügen.
+</p>
 
-<p>Die UDE steht Ihnen diesbezüglich beratend unter <a href="mailto:oer-repository@uni-due.de" title=""><u>oer-repository@uni-due.de</u></a> zur  Seite.</p>
+<p>
+  Laden Sie deshalb nur Inhalte hoch, die Sie selbst erstellt haben, oder bei denen Sie über die erforderlichen
+  Nutzungsrechte zur Veröffentlichung, Nutzung, Verbreitung, Vervielfältigung und der öffentlichen Wiedergabe verfügen.
+  Achten Sie darauf, dass Ihre Materialien keine Inhalte, bspw. Abbildungen, Fotos oder Videos beinhalten, 
+  die urheber- oder markenrechtlich  geschützt sind, 
+  oder die Persönlichkeitsrechte oder datenschutzrechtliche Bestimmungen verletzen.
+</p>
 
-<h2><strong>Lizenzierung der Inhalte</strong></h2>
+<p>
+  Gern informieren wir Sie diesbezüglich 
+  und klären ggf. in Zusammenarbeit mit dem Justitiariat rechtliche Aspekte.
+  Nehmen Sie dazu bitte mit uns 
+  <a href="mailto:oer-repository@uni-due.de">Kontakt per E-Mail (oer-repository@uni-due.de) auf</a>.
+</p>
 
-<p>Die Inhalte werden unter einer vom Autor wählbaren Lizenz für freie Inhalte veröffentlicht. Darunter werden solche Lizenzen verstanden, die alle Nutzerinnen und Nutzer dazu berechtigen, das betreffende Material "zu kopieren, zu verbreiten und anderweitig zu nutzen" . International haben sich für diesen Zweck die Creative Commons Lizenzen durchgesetzt, die sowohl die oben genannten Rechte gewähren und damit zu einer Vereinfachung des Austauschs von Materialien beitragen, als auch die Urheberschaft durch bestimmte Nutzungsbedingungen anerkennen.</p>
+<h2>
+  <strong>Lizenzierung der Inhalte</strong>
+</h2>
 
-<p>Bei neu erstellten Materialien wird empfohlen, Creative-Commons-Lizenzen der Version 4.0 zu verwenden. Für ältere Materialien stehen auch die Creative-Commons-Lizenzen der Version 3.0 zur Verfügung, überdies auch die Open Database License sowie die Public Domain and Dedication License zur Verfügung.</p>
+<p>
+  Die Inhalte werden unter einer vom Autor wählbaren Lizenz für freie Inhalte veröffentlicht. 
+  Darunter werden solche Lizenzen verstanden, die alle Nutzerinnen und Nutzer dazu berechtigen, 
+  das betreffende Material zu kopieren, zu verbreiten und anderweitig zu nutzen. 
+  International haben sich für diesen Zweck die 
+  <a href="https://www.uni-due.de/ub/publikationsdienste/cc_lizenzen.php">Creative Commons Lizenzen</a> 
+  durchgesetzt, die sowohl die oben genannten Rechte gewähren 
+  und damit zu einer Vereinfachung des Austauschs von Materialien beitragen, 
+  als auch die Urheberschaft durch bestimmte Nutzungsbedingungen anerkennen.
+</p>
+<p>
+  Bei neu erstellten Materialien wird empfohlen, 
+  die aktuellen Creative-Commons-Lizenzen der Version 4.0 zu verwenden. 
+  Für ältere Materialien stehen auch frühere Versionen der Lizenzen zur Auswahl.
+  In besonderen Fällen kann auch eine andere geeignete Lizenz wie die 
+  "Open Database License" oder die "Public Domain and Dedication License" verwendet werden.
+</p>
 </div>
-</section><meta><log lastEditor="administrator" date="2018-06-21" time="17:22" /></meta></MyCoReWebPage>
+
+</section>
+</MyCoReWebPage>
