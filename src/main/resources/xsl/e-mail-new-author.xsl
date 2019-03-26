@@ -25,7 +25,7 @@
       <xsl:value-of select="eMail/text()" />
     </to>
     <subject>
-      <xsl:value-of select="i18n:translate('oer.selfregistration.email.subject')" /><xsl:text> </xsl:text><xsl:value-of select="@name" />
+      <xsl:value-of select="i18n:translate('oer.selfregistration.email.subject')" />: <xsl:value-of select="@name" />
     </subject>
     <body>
       <xsl:text>Sehr geehrte Dame, sehr geehrter Herr,</xsl:text><xsl:value-of select="$newline" />
